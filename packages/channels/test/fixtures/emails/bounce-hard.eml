@@ -1,0 +1,29 @@
+Return-Path: <>
+From: Mail Delivery Subsystem <MAILER-DAEMON@mx.zoho.eu>
+To: jean@mondomaine.fr
+Subject: Undelivered Mail Returned to Sender
+Content-Type: multipart/report; report-type=delivery-status; boundary="B1"
+Message-ID: <bounce-1@mx.zoho.eu>
+Date: Tue, 17 Jun 2025 10:12:00 +0200
+
+--B1
+Content-Type: text/plain; charset=utf-8
+
+This is the mail system at host mx.zoho.eu.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients.
+
+<contact@garage-martin.fr>: host mx.garage-martin.fr said:
+    550 5.1.1 <contact@garage-martin.fr>: Recipient address rejected:
+    User unknown in virtual mailbox table
+
+--B1
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; mx.zoho.eu
+Final-Recipient: rfc822; contact@garage-martin.fr
+Action: failed
+Status: 5.1.1
+
+--B1--

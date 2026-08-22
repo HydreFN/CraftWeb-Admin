@@ -44,7 +44,9 @@ export async function choosePrimaryEmailAction(
     .select({ status: schema.prospects.status })
     .from(schema.prospects)
     .where(eq(schema.prospects.id, prospectId));
-  if (p?.status === "A_VERIFIER") {
+  // A_VERIFIER (choix ambigu) ou EMAIL_INVALIDE (bascule après bounce)
+  // → le prospect redevient planifiable
+  if (p?.status === "A_VERIFIER" || p?.status === "EMAIL_INVALIDE") {
     await changeProspectStatus(database, prospectId, "NOUVEAU", "humain");
   }
   await logEvent(database, "revue", "Email principal choisi manuellement", { prospectId });

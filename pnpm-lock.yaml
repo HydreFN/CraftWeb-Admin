@@ -169,6 +169,9 @@ importers:
       drizzle-orm:
         specifier: ^0.44.2
         version: 0.44.7(@electric-sql/pglite@0.3.16)(@types/pg@8.23.1)(kysely@0.28.17)(pg@8.23.0)
+      mailparser:
+        specifier: ^3.7.2
+        version: 3.9.15
       nodemailer:
         specifier: ^6.10.1
         version: 6.10.1
@@ -176,6 +179,9 @@ importers:
       '@electric-sql/pglite':
         specifier: ^0.3.4
         version: 0.3.16
+      '@types/mailparser':
+        specifier: ^3.4.5
+        version: 3.4.6
       '@types/node':
         specifier: ^22.15.0
         version: 22.20.1
