@@ -3,6 +3,7 @@ export const QUEUES = {
   enrichment: "enrichment",
   enrichmentSweep: "enrichment-sweep",
   dmGeneration: "dm-generation",
+  dmSweep: "dm-sweep",
   emailSequencer: "email-sequencer",
   emailSend: "email-send",
   inboxWatcher: "inbox-watcher",
