@@ -57,6 +57,15 @@ export const settingsSchema = z.object({
   senderActivity: z
     .string()
     .default("Création de contenus vidéo courts (TikTok/Reels) pour entreprises locales"),
+  // Critères de découverte (page Recherche)
+  searchCriteria: z
+    .object({
+      country: z.string().default("FR"),
+      city: z.string().default(""),
+      sector: z.string().default(""),
+      keywords: z.string().default(""),
+    })
+    .default({}),
 });
 
 export type AppSettings = z.infer<typeof settingsSchema>;
