@@ -117,6 +117,7 @@ export const prospects = pgTable(
     description: text("description"),
     discoverySource: discoverySourceEnum("discovery_source").notNull().default("manuel"),
     discoveredAt: timestamp("discovered_at", { withTimezone: true }).notNull().defaultNow(),
+    enrichedAt: timestamp("enriched_at", { withTimezone: true }),
     firstContactedAt: timestamp("first_contacted_at", { withTimezone: true }),
     lastInboundAt: timestamp("last_inbound_at", { withTimezone: true }),
     status: prospectStatusEnum("status").notNull().default("NOUVEAU"),

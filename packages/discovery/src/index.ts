@@ -7,3 +7,6 @@ export { PlacesSource } from "./sources/places.js";
 export { YouTubeSource } from "./sources/youtube.js";
 export { CseSource, parseProfileUrl, cleanTitle } from "./sources/cse.js";
 export { OsmSource } from "./sources/osm.js";
+export * from "./enrichment/enrich.js";
+export * from "./enrichment/extract.js";
+export * from "./enrichment/robots.js";
