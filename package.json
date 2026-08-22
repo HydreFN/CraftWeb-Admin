@@ -1,0 +1,25 @@
+{
+  "name": "prospection-ia",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Système de prospection commerciale B2B assistée par IA — conforme CNIL / L.34-5 CPCE",
+  "scripts": {
+    "build": "pnpm -r --filter './packages/*' run typecheck && pnpm --filter @prospection/worker run build && pnpm --filter @prospection/web run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "dev": "pnpm --parallel --filter @prospection/web --filter @prospection/worker run dev",
+    "db:generate": "pnpm --filter @prospection/core run db:generate",
+    "db:migrate": "pnpm --filter @prospection/core run db:migrate",
+    "db:seed": "pnpm --filter @prospection/core run db:seed",
+    "create-account": "pnpm --filter @prospection/web run create-account"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "overrides": {
+      "kysely": "0.28.17"
+    }
+  }
+}

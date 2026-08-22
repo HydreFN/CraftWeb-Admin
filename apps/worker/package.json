@@ -1,0 +1,34 @@
+{
+  "name": "@prospection/worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@prospection/ai": "workspace:*",
+    "@prospection/channels": "workspace:*",
+    "@prospection/core": "workspace:*",
+    "@prospection/discovery": "workspace:*",
+    "drizzle-orm": "^0.44.2",
+    "imapflow": "^1.0.190",
+    "mailparser": "^3.7.2",
+    "nodemailer": "^6.10.1",
+    "pg-boss": "^10.3.2",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.4",
+    "@types/mailparser": "^3.4.5",
+    "@types/node": "^22.15.0",
+    "@types/nodemailer": "^6.4.17",
+    "typescript": "^5.7.3",
+    "vitest": "^3.1.0"
+  }
+}
