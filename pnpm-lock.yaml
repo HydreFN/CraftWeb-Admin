@@ -160,6 +160,9 @@ importers:
 
   packages/channels:
     dependencies:
+      '@prospection/ai':
+        specifier: workspace:*
+        version: link:../ai
       '@prospection/core':
         specifier: workspace:*
         version: link:../core

@@ -15,7 +15,8 @@
   "dependencies": {
     "@prospection/core": "workspace:*",
     "drizzle-orm": "^0.44.2",
-    "nodemailer": "^6.10.1"
+    "nodemailer": "^6.10.1",
+    "@prospection/ai": "workspace:*"
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.3.4",

@@ -1,6 +1,7 @@
 import type { Env } from "@prospection/core";
 import type PgBoss from "pg-boss";
 import { registerDiscoveryJob } from "./discovery.js";
+import { registerEmailSequencerJob } from "./email-sequencer.js";
 import { registerEnrichmentJob } from "./enrichment.js";
 import { QUEUES } from "./queues.js";
 
@@ -14,4 +15,5 @@ export async function registerJobs(boss: PgBoss, env: Env): Promise<void> {
   }
   await registerDiscoveryJob(boss, env);
   await registerEnrichmentJob(boss, env);
+  await registerEmailSequencerJob(boss, env);
 }

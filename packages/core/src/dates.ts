@@ -84,6 +84,13 @@ export function nextWindowStart(window: SendWindow, tz: string, from: Date = new
   throw new Error("Aucun créneau d'envoi trouvé dans les 14 prochains jours");
 }
 
+/** Prochain minuit LOCAL (approximation robuste, ±1 min autour des DST). */
+export function nextLocalMidnight(tz: string, date: Date = new Date()): Date {
+  const p = localParts(tz, date);
+  const minutesIntoDay = p.hour * 60 + p.minute;
+  return new Date(date.getTime() + (1440 - minutesIntoDay) * 60000 + 60000);
+}
+
 /** Nombre de jours entiers entre deux dates locales YYYY-MM-DD. */
 export function daysBetweenLocalDates(a: string, b: string): number {
   const da = new Date(`${a}T00:00:00Z`).getTime();
