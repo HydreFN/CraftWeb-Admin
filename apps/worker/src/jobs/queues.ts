@@ -9,4 +9,5 @@ export const QUEUES = {
   inboxWatcher: "inbox-watcher",
   classifier: "classifier",
   housekeeping: "housekeeping",
+  housekeepingMonthly: "housekeeping-monthly",
 } as const;

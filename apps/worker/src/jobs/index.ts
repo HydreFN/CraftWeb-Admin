@@ -4,6 +4,7 @@ import { registerDiscoveryJob } from "./discovery.js";
 import { registerDmGenerationJob } from "./dm-generation.js";
 import { registerEmailSequencerJob } from "./email-sequencer.js";
 import { registerEnrichmentJob } from "./enrichment.js";
+import { registerHousekeepingJob } from "./housekeeping.js";
 import { registerInboxWatcherJob } from "./inbox-watcher.js";
 import { QUEUES } from "./queues.js";
 
@@ -20,4 +21,5 @@ export async function registerJobs(boss: PgBoss, env: Env): Promise<void> {
   await registerEmailSequencerJob(boss, env);
   await registerInboxWatcherJob(boss, env);
   await registerDmGenerationJob(boss, env);
+  await registerHousekeepingJob(boss, env);
 }
